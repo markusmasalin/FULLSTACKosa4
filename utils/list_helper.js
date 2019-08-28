@@ -35,7 +35,7 @@ const mostBlogs = blogs => {
 
 const mostLikes = blogs => {
     const authors = blogs.map(b => b.author.likes);
-    const mostLikes = authors.reduce((map, blog) => ({
+    const mostLikes = blog.reduce((map, blog) => ({
         ...map,
         [blog]: (map[blog] || 0) + 1,        
       }), {})
@@ -45,6 +45,8 @@ const mostLikes = blogs => {
     //.reduce((m, a) => a.likes > m.likes ? a : m)
        
 }
+
+
 
     
     
