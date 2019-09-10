@@ -95,7 +95,7 @@ describe('addition of a new blog', () => {
     const newBlog = {
       title: 'async calls',
       author: 'Eric Cantona',
-      url: 'ericcantona(dot)com',
+      url: 'ericcantona.com',
       likes: 3
     }
   
@@ -122,7 +122,7 @@ describe('addition of a new blog', () => {
     const newBlog = {
         title: 'Life of George',
         author: 'George ',
-        url: 'lifeofgeorge(dot)com',
+        url: 'lifeofgeorge.com',
       }
   
     await api

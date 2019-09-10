@@ -34,16 +34,21 @@ const mostBlogs = blogs => {
 
 
 const mostLikes = blogs => {
-    const authors = blogs.map(b => b.author.likes);
-    const mostLikes = blog.reduce((map, blog) => ({
-        ...map,
-        [blog]: (map[blog] || 0) + 1,        
-      }), {})
+    
+    
+    const mostLikes = blogs.reduce((authors, a) => ({
+         ...authors,
+         [a.author]: (authors[a.author] || 0 ) + a.likes,
+           
+      
+    }),{})
+    
+   
+    console.log(mostLikes)
     
     return Object.entries(mostLikes)
-    .map(([author, blogs]) => ({ author, blogs}))
-    //.reduce((m, a) => a.likes > m.likes ? a : m)
-       
+    .map(([author, likes]) => ({ author, likes }))
+    .reduce((m, a) => a.likes > m.likes ? a : m)
 }
 
 
