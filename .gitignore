@@ -1,2 +1,5 @@
 node_modules
 .env
+components/Course
+components/ErrorNotification
+components/PersonForm
